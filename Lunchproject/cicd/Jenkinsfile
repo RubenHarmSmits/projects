@@ -1,0 +1,282 @@
+/*
+Jenkins pipeline configuration for the 'Lanthir Lunch' application which will build, test and deploy the application.
+
+The pipeline used docker for most things and doesn't make many assumptions about a build slave besides a docker client being available. 
+    Running a build slave inside docker and exposing the daemon to the container should also work. 
+    We try to rely on the 'docker workflow' plugin for docker operations, but sometimes fall back to docker commands to work arround certain limitations.
+
+TODO
+Currently, we build the project concurrently on the build slave and a remote docker server, the latter of which will publish the images to a privacy registry. 
+    This is a temporary solution to work around the untrusted (self-signed CA) registry. 
+    Because it might result in binary differences between images and introduces additional complexity it should be changed before going to production.
+
+TODO
+Deploy to different kubernetes environments (e.g. staging, production)
+Run integration tests against a cluster (i.e. apply the deployment in a new namespace, wait for the service to become available, run tests and then tear down the deployment)
+*/
+
+config = [
+    app_name: "lanthir",
+
+    remote_docker_server: "tcp://academy-28ee1257:5555",
+    remote_docker_credentials: "academy-28ee1257-docker-daemon",
+
+    docker_registry: "academy-28ee1257:5443",
+    docker_registry_credentials: "academy-28ee1257-docker-registry",
+
+    k8s_staging_credentials: "academy-28ee1257-k8s-token",
+    k8s_prod_credentials: "academy-28ee1257-k8s-token"
+]
+
+vars = [:]
+
+
+/*
+Images that are built in the preparation stage.
+
+The tag is updated when the version is extracted from the scm checkout and after the containers are built they can be accessed using [name].image. 
+    When 'pushImage' is true the image is pushed to the registry when the tests succeeded.
+*/
+buildImages = [
+    tests: [
+        dir: "SogyoLunchApp",
+        dockerfile: "Test/Dockerfile",
+        tag: "${config.app_name}-tests"
+    ],
+    services: [
+        dir: "SogyoLunchApp",
+        dockerfile: "Services/Dockerfile",
+        tag: "${config.app_name}-services",
+        pushImage: true
+    ],
+    client: [
+        dir: "Client",
+        tag: "${config.app_name}-client",
+        pushImage: true
+    ]
+]
+
+
+/*
+Kubernetes deployments
+
+The kubeconfigs are expected to the contain the cluster configuration such as 
+    host and namespace.
+*/
+def deployments = [
+    staging: [
+        config: "cicd/k8s/config-staging",
+        credentials: "${config.k8s_staging_credentials}",
+        condition: { "${BRANCH_NAME}" == 'develop' }
+    ],
+    prod: [
+        config: "cicd/k8s/config-prod",
+        credentials: "${config.k8s_prod_credentials}",
+        condition: { "${BRANCH_NAME}" == 'master' }
+    ]
+]
+
+// Create deployment patches for associated kubernetes images to force a rolling update
+def deployment_update_patches = [
+        services: [
+            { sh(script: "cicd/k8s/patch-deploy.sh ${config.app_name}-services ${buildImages.services.version}",
+                returnStdout: true) }
+        ],
+        client: [
+            { sh(script: "cicd/k8s/patch-deploy.sh ${config.app_name}-client ${buildImages.client.version}",
+                returnStdout: true) }
+        ]
+]
+
+/* 
+Apply a deployment to kubernetes
+
+HOME is unset inside the container so it is set the workspace to prevent kubectl from trying to write to /
+*/
+def withDeployment = { d ->
+    def cmd_prefix="HOME=${env.WORKSPACE} kubectl --kubeconfig=${d.config}"
+     withContainer(pullImages.kubectl) {
+        withCredentials([string(credentialsId: d.credentials, variable: "token")]) {
+            sh "${cmd_prefix} config set-credentials user-dk4jd --token ${token}"
+            sh "${cmd_prefix} apply -f cicd/k8s/yml"
+            deployment_update_patches.each { svc, patches -> 
+                patches.each { p ->
+                    sh "${cmd_prefix} patch deploy ${config.app_name}-${svc}-deploy -p \"${p()}\""
+                }
+            }
+        }
+    }
+}
+
+// Images that are pulled in the preperation stage as dependencies for the pipeline (utilities etc.)
+pullImages = [
+    busybox: [
+        name: "busybox"
+    ],
+    kubectl: [
+        name: "bitnami/kubectl",
+        args: ["--entrypoint=''"]
+    ]
+]
+
+/*
+The command line for the remote docker server used to configure the file-based credential helper used for logging in to the registry.
+
+Because existing docker-credential helpers did not work on headless servers (e.g. secretservice requires interactive authentication) 
+    we added a custom file-based credential helper which needs to be in the path and set in the docker client configuration.
+*/
+def remoteDockerCmd = { c ->
+    sh "PATH=${env.WORKSPACE}/cicd/.docker:\$PATH docker --config=${env.WORKSPACE}/cicd/.docker ${c}"
+}
+
+// Returns the version string based on the branch and commit hash, or 'latest' when building develop. 
+//      Will convert uppercase and special characters in the branch name to lowercase and underscores respectively.
+def getVersion(branch, commit) {
+    return branch == "develop" \
+        ? "latest"
+        : sh (
+            script: "echo -n ${branch}-${commit} | sed \'s/.*/\\L&/g;s/[\\/]/_/g\'",
+            returnStdout: true
+        )
+}
+
+// Transform a map by executing a closure for each key
+def transform(map, closure) {
+    return map.collectEntries { k, v ->
+        [(k): closure(v)]
+    }
+}
+
+// Same as above, but return a closure with the transformation instead of performing it
+def transformClosure(map, closure) {
+    return map.collectEntries { k, v ->
+        [(k): { closure(v) }]
+    }
+}
+
+// Run a container from the 'pullImages' or 'buildImages' map. If the map has 'args' defined they will be added to the docker command line.
+//      By ising [image].inside() the workspace is mounted inside the container and will be the working directory.
+def withContainer(container, body) {
+    container.image.inside(container.args != null ? container.args.join(" ") : "") {
+        body()
+    }
+}
+
+// Construct the 'docker build' arguments from the 'buildImages' map, using the 'dockerfile' and 'build_args' as arguments if defined.
+def dockerBuildArgs(v) {
+    return """ \
+        -f ${v.dir}/${v.dockerfile ?: "Dockerfile"} \
+        ${v.build_args != null ? ("--build-arg " + v.build_args.join(" --build-arg ")) : ""} \
+        ${v.dir}
+    """
+}
+
+// Here, the declarative Jenkins pipeline starts (which can only contain a custom DSL which is a subset of Groovy which some Jenkins-specific functionality). 
+//      We may still write Groovy code inside a 'script' tag.
+pipeline {
+    agent { label 'docker' }
+
+    // Disable concurrent builds on the Jenkins server
+    options { disableConcurrentBuilds() }
+
+    stages {
+        // Configure the build based on the status of the repository
+        stage("Checkout") {
+            steps {
+                script {
+                    vars.version = getVersion("${BRANCH_NAME}", "${GIT_COMMIT.substring(0, 8)}")
+                    // Set the fully qualified tag for each container in 'buildImages'
+                    transform(buildImages, { v ->
+                        v.version = "${config.docker_registry}/${v.tag}:${vars.version}".toLowerCase()
+                    })
+                    
+                    // Store the uid and gid of the user on the build slave to be used later
+                    vars.uid = sh(script: 'echo -n $(id -u)', returnStdout: true)
+                    vars.gid = sh(script: 'echo -n $(id -g)', returnStdout: true)
+                    buildImages.tests.build_args = ["UID=${vars.uid}", "GID=${vars.gid}"]
+                }
+            }
+        }
+        stage("Container Images") {
+            steps {
+                script {
+                    // Concurrently pull all images in 'pullImages' and build all images in 'buildImages' on the local and remote docker
+                    parallel(
+                        pullImages: {
+                            parallel transformClosure(pullImages, { v ->
+                                v.image = docker.image(v.name)
+                            })
+                        },
+                        buildImages: {
+                            parallel transformClosure(buildImages, { v ->
+                                v.image = docker.build(v.version, dockerBuildArgs(v))
+                            })
+                        },
+                        buildOnRemote: {
+                            docker.withServer(config.remote_docker_server, config.remote_docker_credentials) {
+                                parallel transformClosure(buildImages, { v ->
+                                    if (v.pushImage != null && v.pushImage) {
+                                        v.remote_image = docker.build(v.version, dockerBuildArgs(v))
+                                    }
+                                })
+                            }
+                        }
+                    )
+                }
+            }
+        }
+        // Export the test results from the unit-test container to the workspace and publish the test and coverage results
+        stage("Unit Tests") {
+            steps {
+                script {
+                    withContainer(buildImages.tests, {
+                        sh "cp -rvf /app/tests ${workspace}"
+                    })
+                    junit testResults: "tests/junit/*.xml"
+                    cobertura coberturaReportFile: "tests/coverage/*.xml"
+                }
+            }
+        }
+        /* Push the images to the docker registry from the remote docker using the credentials stored in the configuration. 
+            The FILE_SECRET is used by the file based credential helper to encrypt the data at rest.
+        
+        TODO
+        When using a trusted docker registry we could use withRegistry() and [image].push() to publish the images. 
+            However, this would still require a credential-helper to work.
+        */
+        stage("Push to Registry") {
+            steps {
+                script {
+                    docker.withServer(config.remote_docker_server, config.remote_docker_credentials) {
+                        withCredentials([usernamePassword(
+                            credentialsId: config.docker_registry_credentials,
+                            usernameVariable: "user",
+                            passwordVariable: "pass")]) {
+                                withEnv(["DOCKER_CREDENTIAL_FILE_SECRET=${pass}"]) {
+                                    remoteDockerCmd "login -u ${user} -p ${pass} ${config.docker_registry}"
+                                    parallel transformClosure(buildImages, { v ->
+                                        if (v.pushImage != null && v.pushImage) {
+                                            remoteDockerCmd "push ${v.version}"
+                                        }
+                                    })
+                                    remoteDockerCmd "logout ${config.docker_registry}"
+                                }
+                        }
+                    }
+                }
+            }
+        }
+        // Apply the kubernetes deployment to the stagingenvironment
+        stage("Deploy") {
+            steps {
+                script {
+                    deployments.each { name, d ->
+                        if (d.condition()) {
+                            withDeployment(d)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

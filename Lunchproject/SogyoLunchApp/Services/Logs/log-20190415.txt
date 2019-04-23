@@ -1,0 +1,17 @@
+2019-04-15 16:06:42.171 +02:00 [Information] User profile is available. Using '"C:\Users\rsmits\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-15 16:06:42.337 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-15 16:06:42.665 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-15 16:06:45.373 +02:00 [Information] Executed DbCommand ("26"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2019-04-15 16:06:45.380 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2019-04-15 16:06:45.406 +02:00 [Information] Executed DbCommand ("19"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2019-04-15 16:06:45.413 +02:00 [Information] No migrations were applied. The database is already up to date.
+2019-04-15 16:09:12.654 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2019-04-15 16:09:12.822 +02:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Services\wwwroot\index.html"'
+2019-04-15 16:09:12.829 +02:00 [Information] Request finished in 176.4334ms 200 text/html
+2019-04-15 16:09:12.884 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/Sogyologo.jpg  
+2019-04-15 16:09:12.918 +02:00 [Information] Request finished in 33.0729ms 404 

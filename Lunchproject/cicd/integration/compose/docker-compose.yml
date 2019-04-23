@@ -1,0 +1,40 @@
+version: '3.4'
+
+services:
+  services:
+    image: ${LANTHIR_SVCS_TAG:-lanthir-services}
+    build:
+      context: ../../../SogyoLunchApp
+      dockerfile: Services/Dockerfile
+    entrypoint:
+      - bash
+      - -c
+      - "sleep ${STARTUP_DELAY:-0} && dotnet /app/Services.dll"
+    volumes:
+     - /etc/localtime:/etc/localtime:ro
+    networks:
+      - lanthir-lunch
+    ports:
+      - 8080:8080
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__LanthirDatabase: >-
+        Server=mssql-db;
+        User ID=SA;
+        Password=${MSSQL_SA_PASSWORD};
+        Database=LanthirDatabase;
+        Connect Timeout=180;
+    depends_on:
+      - mssql-db
+  mssql-db:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    networks:
+      - lanthir-lunch
+    environment:
+      SA_PASSWORD: ${MSSQL_SA_PASSWORD}
+      ACCEPT_EULA: 'Y'
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S 127.0.0.1 -U SA -P "${MSSQL_SA_PASSWORD}" -Q 'select @@version';
+
+networks:
+  lanthir-lunch:

@@ -1,0 +1,13 @@
+version: '3.4'
+
+# Container that performs integration testing
+services:
+  integration-test:
+    build:
+      context: ../
+    environment:
+      WAIT_TIME: ${STARTUP_DELAY}
+    networks:
+      - lanthir-lunch
+    depends_on:
+      - services

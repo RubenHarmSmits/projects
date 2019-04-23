@@ -1,0 +1,43 @@
+# vim: ft=yaml
+
+apiVersion: v1
+kind: Config
+clusters:
+- name: "academy-28ee1257-cluster"
+  cluster:
+    server: "https://academy-28ee1257:8443/k8s/clusters/c-77twl"
+    api-version: v1
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM3akNDQ\
+      WRhZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFvTVJJd0VBWURWUVFLRXdsMGFHVXQKY\
+      21GdVkyZ3hFakFRQmdOVkJBTVRDV05oZEhSc1pTMWpZVEFlRncweE9UQXpNVGt3T1RFek1USmFGd\
+      zB5T1RBegpNVFl3T1RFek1USmFNQ2d4RWpBUUJnTlZCQW9UQ1hSb1pTMXlZVzVqYURFU01CQUdBM\
+      VVFQXhNSlkyRjBkR3hsCkxXTmhNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ\
+      0tDQVFFQTFWWlN3ajlYSmJmQ04rajAKcU93eTdCRXgrbkRXRFNnRFZKd0RKZlRjK1QyeWlMMXdHQ\
+      1NHS0ZKSkZQcUE3T2ZGSkF4dU9CWk8ybDB5TUR5cApmSkhjRUZpczRYYkI0eXJzRGdFQ0xRcVlGY\
+      jA5SnJCQ2w3bXMzODBlUVJDR0ZMeFFuUmc1RU9EY1ZzZ1k2Lzc2CnhSODI5Ym83Zm1mYm04WThjV\
+      m42cWFCMUZQMjRrb0pHbmxXc3U0RmozcXZNQ2Y1VmRHazI1TUw2RUkvRTVETHAKaCtack5Cbm5HR\
+      EUxQjJWZE8rblJ0NGpreGcxUUZBMlE2amFMVVJqMGh1b3diekJic3h5bHJlbFpYOEJRZm9rYgpjU\
+      Gw2RjR6YXBZNGVHNHFYcFc4UTc0eUN3VSt3Y01TaVYrbG5ZZFFTWDdtRmtMT3JIUzdXYk44N1I1U\
+      DlpSDhSCmpmKzBBUUlEQVFBQm95TXdJVEFPQmdOVkhROEJBZjhFQkFNQ0FxUXdEd1lEVlIwVEFRS\
+      C9CQVV3QXdFQi96QU4KQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBdnFtWFJoYy9leGVRWk84WW9BT\
+      VNVRlJxS01RSFNVVm0vQXJkYzI0UgppWFVmaWZ3d1Yya2J2bnJrQVI2VXRtNW0rbUdhYmlJakFDb\
+      1pFL3NrSlpYV3R3NjZmdFBienA0S2tWSnpOSW1kCk5IdFBxWUwydWZNRE0xSUQ2bnFkZlJKNmEyU\
+      XBrSzh0M2FEZ0tzaWQwMHloNi8xcWhNZnphUC9JNlF0T1krbkgKdTJMbm1tK0lqU1lIOVU5OUg5R\
+      GJ6UmlJamZlVlczQW51UFE3ZllHMzlaN283clRxeTdHdzErc25WMCtsLzVLSAo1YkdnQStDN3VKV\
+      WNZYVBHQ1d3SDFzWTJCVE85SmxYMXhveURXRDNRZmE1djRpY0RGdlJmUWU3TWxtRUZNMXpECmlyS\
+      Wc5QnpQQTd0Q3ZSWVh5bXR3R0tzK2Zwa2MxdkdFZGhOS1RyK0xtbjhvTHc9PQotLS0tLUVORCBDR\
+      VJUSUZJQ0FURS0tLS0t"
+
+users:
+- name: "user-dk4jd"
+  user:
+    token: ""
+
+contexts:
+- name: "academy-28ee1257-cluster"
+  context:
+    user: "user-dk4jd"
+    namespace: "lanthir-prod"
+    cluster: "academy-28ee1257-cluster"
+
+current-context: "academy-28ee1257-cluster"

@@ -1,0 +1,76 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>c078cdbc-ceee-440b-ad9a-5a45dada16e8</UserSecretsId>
+    <RootNamespace>SogyoLunchApp</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="APIClient\**" />
+    <Compile Remove="App\**" />
+    <Compile Remove="FrontEnd\**" />
+    <Compile Remove="wwwroot\js\wwwroot\**" />
+    <Content Remove="APIClient\**" />
+    <Content Remove="App\**" />
+    <Content Remove="FrontEnd\**" />
+    <Content Remove="wwwroot\js\wwwroot\**" />
+    <EmbeddedResource Remove="APIClient\**" />
+    <EmbeddedResource Remove="App\**" />
+    <EmbeddedResource Remove="FrontEnd\**" />
+    <EmbeddedResource Remove="wwwroot\js\wwwroot\**" />
+    <None Remove="APIClient\**" />
+    <None Remove="App\**" />
+    <None Remove="FrontEnd\**" />
+    <None Remove="wwwroot\js\wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190418085812_Categorien.cs" />
+    <Compile Remove="Migrations\20190418085812_Categorien.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Sogyologo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Operations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Sogyologo.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis" Version="1.38.2" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.38.2" />
+    <PackageReference Include="Google.Apis.Oauth2.v2" Version="1.38.2.1532" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="2.2.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.4.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.0.2105168" />
+    <PackageReference Include="Node.js" Version="5.3.0" />
+    <PackageReference Include="NUnit" Version="3.10.1" />
+    <PackageReference Include="Serilog" Version="2.8.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.0.1" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+  </ItemGroup>
+
+</Project>

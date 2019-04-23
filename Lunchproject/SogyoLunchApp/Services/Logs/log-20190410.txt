@@ -1,0 +1,591 @@
+2019-04-10 09:24:40.266 +02:00 [Information] User profile is available. Using '"C:\Users\rsmits\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-10 09:24:40.506 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:24:41.971 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:24:45.962 +02:00 [Information] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2019-04-10 09:24:45.969 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2019-04-10 09:24:45.977 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2019-04-10 09:24:45.986 +02:00 [Information] No migrations were applied. The database is already up to date.
+2019-04-10 09:24:49.292 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2019-04-10 09:24:49.501 +02:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Services\wwwroot\index.html"'
+2019-04-10 09:24:49.507 +02:00 [Information] Request finished in 215.5977ms 200 text/html
+2019-04-10 09:24:49.604 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/Sogyologo.jpg  
+2019-04-10 09:24:49.607 +02:00 [Information] Request finished in 3.1167ms 404 
+2019-04-10 09:24:59.105 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/bezorgdag  
+2019-04-10 09:24:59.123 +02:00 [Information] Request finished in 18.0693ms 307 
+2019-04-10 09:24:59.140 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/bezorgdag  
+2019-04-10 09:24:59.143 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:24:59.144 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:24:59.185 +02:00 [Information] Route matched with "{action = \"getBezorgdagen\", controller = \"Bezorgdag\"}". Executing action "Services.APIService.BezorgdagController.getBezorgdagen (Services)"
+2019-04-10 09:24:59.191 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:24:59.203 +02:00 [Information] Executing action method "Services.APIService.BezorgdagController.getBezorgdagen (Services)" - Validation state: Valid
+2019-04-10 09:24:59.213 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:24:59.385 +02:00 [Information] Executed DbCommand ("13"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.424 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.433 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.442 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.450 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.459 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.467 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.474 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.484 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.491 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.500 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.505 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.513 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.518 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.526 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.537 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.545 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.552 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.560 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.569 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.576 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.584 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.593 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.605 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.614 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.622 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.629 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.643 +02:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.656 +02:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.687 +02:00 [Information] Executed DbCommand ("23"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.698 +02:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.715 +02:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.723 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.731 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.738 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.744 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.751 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.758 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.764 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.771 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__datum_DayOfWeek_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [y].[Dag], [y].[BestelDeadlineDag], [y].[BestelDeadlineTijd], [y].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [y]
+WHERE [y].[Dag] = @__datum_DayOfWeek_0"
+2019-04-10 09:24:59.787 +02:00 [Information] Executed action method "Services.APIService.BezorgdagController.getBezorgdagen (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 578.3785ms.
+2019-04-10 09:24:59.797 +02:00 [Information] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[System.DateTime, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2019-04-10 09:24:59.924 +02:00 [Information] Executed action "Services.APIService.BezorgdagController.getBezorgdagen (Services)" in 734.6149ms
+2019-04-10 09:24:59.947 +02:00 [Information] Request finished in 806.8956ms 200 application/json; charset=utf-8
+2019-04-10 09:24:59.960 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/bestelling/2019-04-12/1  
+2019-04-10 09:24:59.961 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/winkel/2019-04-12  
+2019-04-10 09:24:59.966 +02:00 [Information] Request finished in 5.8303ms 307 
+2019-04-10 09:24:59.971 +02:00 [Information] Request finished in 10.7856ms 307 
+2019-04-10 09:24:59.987 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/bestelling/2019-04-12/1  
+2019-04-10 09:24:59.992 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/winkel/2019-04-12  
+2019-04-10 09:24:59.993 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:24:59.994 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:24:59.997 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:24:59.999 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:00.018 +02:00 [Information] Route matched with "{action = \"GetBestellingenPerDatumEnGebruiker\", controller = \"Bestelling\"}". Executing action "Services.APIService.BestellingController.GetBestellingenPerDatumEnGebruiker (Services)"
+2019-04-10 09:25:00.018 +02:00 [Information] Route matched with "{action = \"GetWinkelBijDatum\", controller = \"Winkel\"}". Executing action "Services.APIService.WinkelController.GetWinkelBijDatum (Services)"
+2019-04-10 09:25:00.021 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:00.027 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:00.075 +02:00 [Information] Executing action method "Services.APIService.BestellingController.GetBestellingenPerDatumEnGebruiker (Services)" with arguments (["4/12/2019 12:00:00 AM", "1"]) - Validation state: Valid
+2019-04-10 09:25:00.076 +02:00 [Information] Executing action method "Services.APIService.WinkelController.GetWinkelBijDatum (Services)" with arguments (["4/12/2019 12:00:00 AM"]) - Validation state: Valid
+2019-04-10 09:25:00.125 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:00.134 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:00.139 +02:00 [Information] Executed action method "Services.APIService.BestellingController.GetBestellingenPerDatumEnGebruiker (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 18.8381ms.
+2019-04-10 09:25:00.144 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[SogyoLunchApp.Bestelling, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:00.239 +02:00 [Information] Executed DbCommand ("25"ms) [Parameters=["@__dag_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Dag], [s].[BestelDeadlineDag], [s].[BestelDeadlineTijd], [s].[WinkelId], [s.Winkel].[WinkelId], [s.Winkel].[Winkellocatie], [s.Winkel].[Winkelnaam]
+FROM [StandaardWinkelsPerBezorgdagen] AS [s]
+LEFT JOIN [Winkels] AS [s.Winkel] ON [s].[WinkelId] = [s.Winkel].[WinkelId]
+WHERE [s].[Dag] = @__dag_0"
+2019-04-10 09:25:00.263 +02:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@__date_Date_0='?' (DbType = DateTime2), @__gebruikerId_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BestellingId], [x].[Besteldatum], [x].[Bezorgdatum], [x].[GebruikerId]
+FROM [Bestellingen] AS [x]
+WHERE (CONVERT(date, [x].[Bezorgdatum]) = @__date_Date_0) AND ([x].[GebruikerId] = @__gebruikerId_1)
+ORDER BY [x].[BestellingId]"
+2019-04-10 09:25:00.272 +02:00 [Information] Executed action method "Services.APIService.WinkelController.GetWinkelBijDatum (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 140.5059ms.
+2019-04-10 09:25:00.276 +02:00 [Information] Executing JsonResult, writing value of type '"SogyoLunchApp.Winkel"'.
+2019-04-10 09:25:00.290 +02:00 [Information] Executed action "Services.APIService.WinkelController.GetWinkelBijDatum (Services)" in 263.2428ms
+2019-04-10 09:25:00.294 +02:00 [Information] Request finished in 301.9884ms 200 application/json; charset=utf-8
+2019-04-10 09:25:00.305 +02:00 [Information] Executed DbCommand ("18"ms) [Parameters=["@__date_Date_0='?' (DbType = DateTime2), @__gebruikerId_1='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x.ProductenPerBestellingen].[BestellingId], [x.ProductenPerBestellingen].[ProductId], [x.ProductenPerBestellingen].[Aantal], [x.ProductenPerBestellingen].[Notitie], [x.ProductenPerBestellingen].[Prijs], [p.Product].[ProductId], [p.Product].[Naam], [p.Product].[Prijs], [p.Product].[WinkelId]
+FROM [ProductenPerBestellingen] AS [x.ProductenPerBestellingen]
+INNER JOIN [Producten] AS [p.Product] ON [x.ProductenPerBestellingen].[ProductId] = [p.Product].[ProductId]
+INNER JOIN (
+    SELECT [x0].[BestellingId]
+    FROM [Bestellingen] AS [x0]
+    WHERE (CONVERT(date, [x0].[Bezorgdatum]) = @__date_Date_0) AND ([x0].[GebruikerId] = @__gebruikerId_1)
+) AS [t] ON [x.ProductenPerBestellingen].[BestellingId] = [t].[BestellingId]
+ORDER BY [t].[BestellingId]"
+2019-04-10 09:25:00.351 +02:00 [Information] Executed action "Services.APIService.BestellingController.GetBestellingenPerDatumEnGebruiker (Services)" in 330.5333ms
+2019-04-10 09:25:00.357 +02:00 [Information] Request finished in 369.8241ms 200 application/json; charset=utf-8
+2019-04-10 09:25:00.628 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/product/2019-04-12  
+2019-04-10 09:25:00.628 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/deadline/2019-04-12  
+2019-04-10 09:25:00.629 +02:00 [Information] Request finished in 1.6817ms 307 
+2019-04-10 09:25:00.631 +02:00 [Information] Request finished in 2.3552ms 307 
+2019-04-10 09:25:00.639 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/product/2019-04-12  
+2019-04-10 09:25:00.639 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/deadline/2019-04-12  
+2019-04-10 09:25:00.640 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:00.641 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:00.644 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:00.646 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:00.649 +02:00 [Information] Route matched with "{action = \"GetProductenbijDatum\", controller = \"Product\"}". Executing action "Services.APIService.ProductController.GetProductenbijDatum (Services)"
+2019-04-10 09:25:00.652 +02:00 [Information] Route matched with "{action = \"GetDeadlinePerDatum\", controller = \"Deadline\"}". Executing action "Services.APIService.DeadlineController.GetDeadlinePerDatum (Services)"
+2019-04-10 09:25:00.653 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:00.655 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:00.657 +02:00 [Information] Executing action method "Services.APIService.ProductController.GetProductenbijDatum (Services)" with arguments (["4/12/2019 12:00:00 AM"]) - Validation state: Valid
+2019-04-10 09:25:00.657 +02:00 [Information] Executing action method "Services.APIService.DeadlineController.GetDeadlinePerDatum (Services)" with arguments (["4/12/2019 12:00:00 AM"]) - Validation state: Valid
+2019-04-10 09:25:00.664 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:00.668 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:00.674 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=["@__dag_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [s].[Dag], [s].[BestelDeadlineDag], [s].[BestelDeadlineTijd], [s].[WinkelId], [s.Winkel].[WinkelId], [s.Winkel].[Winkellocatie], [s.Winkel].[Winkelnaam]
+FROM [StandaardWinkelsPerBezorgdagen] AS [s]
+LEFT JOIN [Winkels] AS [s.Winkel] ON [s].[WinkelId] = [s.Winkel].[WinkelId]
+WHERE [s].[Dag] = @__dag_0"
+2019-04-10 09:25:00.683 +02:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@__bezorgdag_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Dag], [x].[BestelDeadlineDag], [x].[BestelDeadlineTijd], [x].[WinkelId]
+FROM [StandaardWinkelsPerBezorgdagen] AS [x]
+WHERE [x].[Dag] = @__bezorgdag_0"
+2019-04-10 09:25:00.688 +02:00 [Information] Executed action method "Services.APIService.DeadlineController.GetDeadlinePerDatum (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 21.2818ms.
+2019-04-10 09:25:00.690 +02:00 [Information] Executing JsonResult, writing value of type '"System.DateTime"'.
+2019-04-10 09:25:00.692 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__winkel_0_WinkelId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ProductId], [x].[Naam], [x].[Prijs], [x].[WinkelId]
+FROM [Producten] AS [x]
+WHERE [x].[WinkelId] = @__winkel_0_WinkelId"
+2019-04-10 09:25:00.692 +02:00 [Information] Executed action "Services.APIService.DeadlineController.GetDeadlinePerDatum (Services)" in 37.0052ms
+2019-04-10 09:25:00.700 +02:00 [Information] Request finished in 61.2623ms 200 application/json; charset=utf-8
+2019-04-10 09:25:00.701 +02:00 [Information] Executed action method "Services.APIService.ProductController.GetProductenbijDatum (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 39.3541ms.
+2019-04-10 09:25:00.706 +02:00 [Information] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:00.710 +02:00 [Information] Executed action "Services.APIService.ProductController.GetProductenbijDatum (Services)" in 56.9226ms
+2019-04-10 09:25:00.711 +02:00 [Information] Request finished in 72.5009ms 200 application/json; charset=utf-8
+2019-04-10 09:25:24.646 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/bestelling/maand/2019-04/1  
+2019-04-10 09:25:24.649 +02:00 [Information] Request finished in 2.3769ms 307 
+2019-04-10 09:25:24.684 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/bestelling/maand/2019-04/1  
+2019-04-10 09:25:24.686 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:24.689 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:24.692 +02:00 [Information] Route matched with "{action = \"GetBestellingenPerMaandEnGebruiker\", controller = \"Bestelling\"}". Executing action "Services.APIService.BestellingController.GetBestellingenPerMaandEnGebruiker (Services)"
+2019-04-10 09:25:24.698 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:24.700 +02:00 [Information] Executing action method "Services.APIService.BestellingController.GetBestellingenPerMaandEnGebruiker (Services)" with arguments (["4/1/2019 12:00:00 AM", "1"]) - Validation state: Valid
+2019-04-10 09:25:24.706 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:24.710 +02:00 [Information] Executed action method "Services.APIService.BestellingController.GetBestellingenPerMaandEnGebruiker (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 6.5613ms.
+2019-04-10 09:25:24.713 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[[SogyoLunchApp.Bestelling, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:24.730 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__maand_Month_0='?' (DbType = Int32), @__maand_Year_1='?' (DbType = Int32), @__gebruikerId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[BestellingId], [x].[Besteldatum], [x].[Bezorgdatum], [x].[GebruikerId]
+FROM [Bestellingen] AS [x]
+WHERE ((DATEPART(month, [x].[Bezorgdatum]) = @__maand_Month_0) AND (DATEPART(year, [x].[Bezorgdatum]) = @__maand_Year_1)) AND ([x].[GebruikerId] = @__gebruikerId_2)
+ORDER BY [x].[BestellingId]"
+2019-04-10 09:25:24.743 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=["@__maand_Month_0='?' (DbType = Int32), @__maand_Year_1='?' (DbType = Int32), @__gebruikerId_2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x.ProductenPerBestellingen].[BestellingId], [x.ProductenPerBestellingen].[ProductId], [x.ProductenPerBestellingen].[Aantal], [x.ProductenPerBestellingen].[Notitie], [x.ProductenPerBestellingen].[Prijs], [p.Product].[ProductId], [p.Product].[Naam], [p.Product].[Prijs], [p.Product].[WinkelId]
+FROM [ProductenPerBestellingen] AS [x.ProductenPerBestellingen]
+INNER JOIN [Producten] AS [p.Product] ON [x.ProductenPerBestellingen].[ProductId] = [p.Product].[ProductId]
+INNER JOIN (
+    SELECT [x0].[BestellingId]
+    FROM [Bestellingen] AS [x0]
+    WHERE ((DATEPART(month, [x0].[Bezorgdatum]) = @__maand_Month_0) AND (DATEPART(year, [x0].[Bezorgdatum]) = @__maand_Year_1)) AND ([x0].[GebruikerId] = @__gebruikerId_2)
+) AS [t] ON [x.ProductenPerBestellingen].[BestellingId] = [t].[BestellingId]
+ORDER BY [t].[BestellingId]"
+2019-04-10 09:25:24.755 +02:00 [Information] Executed action "Services.APIService.BestellingController.GetBestellingenPerMaandEnGebruiker (Services)" in 57.3251ms
+2019-04-10 09:25:24.758 +02:00 [Information] Request finished in 73.4937ms 200 application/json; charset=utf-8
+2019-04-10 09:25:32.240 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/product  
+2019-04-10 09:25:32.242 +02:00 [Information] Request finished in 1.8813ms 307 
+2019-04-10 09:25:32.252 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/product  
+2019-04-10 09:25:32.254 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:32.257 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:32.259 +02:00 [Information] Request finished in 6.8169ms 404 
+2019-04-10 09:25:39.254 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/winkel  
+2019-04-10 09:25:39.255 +02:00 [Information] Request finished in 1.3908ms 307 
+2019-04-10 09:25:39.266 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/winkel  
+2019-04-10 09:25:39.268 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:39.270 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:39.272 +02:00 [Information] Route matched with "{action = \"getWinkels\", controller = \"Winkel\"}". Executing action "Services.APIService.WinkelController.getWinkels (Services)"
+2019-04-10 09:25:39.276 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:39.278 +02:00 [Information] Executing action method "Services.APIService.WinkelController.getWinkels (Services)" - Validation state: Valid
+2019-04-10 09:25:39.283 +02:00 [Information] Executed action method "Services.APIService.WinkelController.getWinkels (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 0.644ms.
+2019-04-10 09:25:39.287 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:39.290 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:39.300 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]"
+2019-04-10 09:25:39.305 +02:00 [Information] Executed action "Services.APIService.WinkelController.getWinkels (Services)" in 29.4207ms
+2019-04-10 09:25:39.306 +02:00 [Information] Request finished in 40.1385ms 200 application/json; charset=utf-8
+2019-04-10 09:25:39.509 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/product/winkel/Albert Heijn Bezorgservice  
+2019-04-10 09:25:39.511 +02:00 [Information] Request finished in 1.903ms 307 
+2019-04-10 09:25:39.517 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/product/winkel/Albert Heijn Bezorgservice  
+2019-04-10 09:25:39.520 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:39.523 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:39.525 +02:00 [Information] Route matched with "{action = \"GetProductenPerWinkel\", controller = \"Product\"}". Executing action "Services.APIService.ProductController.GetProductenPerWinkel (Services)"
+2019-04-10 09:25:39.527 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:39.528 +02:00 [Information] Executing action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)" with arguments (["Albert Heijn Bezorgservice"]) - Validation state: Valid
+2019-04-10 09:25:39.537 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:39.551 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=["@__name_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]
+WHERE [w].[Winkelnaam] = @__name_0"
+2019-04-10 09:25:39.558 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=["@__winkel_0_WinkelId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ProductId], [x].[Naam], [x].[Prijs], [x].[WinkelId]
+FROM [Producten] AS [x]
+WHERE [x].[WinkelId] = @__winkel_0_WinkelId"
+2019-04-10 09:25:39.565 +02:00 [Information] Executed action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 29.6393ms.
+2019-04-10 09:25:39.569 +02:00 [Information] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:39.571 +02:00 [Information] Executed action "Services.APIService.ProductController.GetProductenPerWinkel (Services)" in 44.2879ms
+2019-04-10 09:25:39.575 +02:00 [Information] Request finished in 58.6651ms 200 application/json; charset=utf-8
+2019-04-10 09:25:41.675 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/product/winkel/snackbar  
+2019-04-10 09:25:41.676 +02:00 [Information] Request finished in 1.3424ms 307 
+2019-04-10 09:25:41.687 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/product/winkel/snackbar  
+2019-04-10 09:25:41.689 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:41.691 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:41.693 +02:00 [Information] Route matched with "{action = \"GetProductenPerWinkel\", controller = \"Product\"}". Executing action "Services.APIService.ProductController.GetProductenPerWinkel (Services)"
+2019-04-10 09:25:41.698 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:41.703 +02:00 [Information] Executing action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)" with arguments (["snackbar"]) - Validation state: Valid
+2019-04-10 09:25:41.708 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:41.711 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__name_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]
+WHERE [w].[Winkelnaam] = @__name_0"
+2019-04-10 09:25:41.722 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__winkel_0_WinkelId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ProductId], [x].[Naam], [x].[Prijs], [x].[WinkelId]
+FROM [Producten] AS [x]
+WHERE [x].[WinkelId] = @__winkel_0_WinkelId"
+2019-04-10 09:25:41.726 +02:00 [Information] Executed action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 18.2028ms.
+2019-04-10 09:25:41.733 +02:00 [Information] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:41.736 +02:00 [Information] Executed action "Services.APIService.ProductController.GetProductenPerWinkel (Services)" in 37.8386ms
+2019-04-10 09:25:41.739 +02:00 [Information] Request finished in 51.6602ms 200 application/json; charset=utf-8
+2019-04-10 09:25:42.892 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/product/winkel/Albert Heijn Bezorgservice  
+2019-04-10 09:25:42.895 +02:00 [Information] Request finished in 2.8306ms 307 
+2019-04-10 09:25:42.904 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/product/winkel/Albert Heijn Bezorgservice  
+2019-04-10 09:25:42.906 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:42.908 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:42.910 +02:00 [Information] Route matched with "{action = \"GetProductenPerWinkel\", controller = \"Product\"}". Executing action "Services.APIService.ProductController.GetProductenPerWinkel (Services)"
+2019-04-10 09:25:42.918 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:42.920 +02:00 [Information] Executing action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)" with arguments (["Albert Heijn Bezorgservice"]) - Validation state: Valid
+2019-04-10 09:25:42.925 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:42.928 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__name_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]
+WHERE [w].[Winkelnaam] = @__name_0"
+2019-04-10 09:25:42.939 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=["@__winkel_0_WinkelId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ProductId], [x].[Naam], [x].[Prijs], [x].[WinkelId]
+FROM [Producten] AS [x]
+WHERE [x].[WinkelId] = @__winkel_0_WinkelId"
+2019-04-10 09:25:42.943 +02:00 [Information] Executed action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 18.7553ms.
+2019-04-10 09:25:42.951 +02:00 [Information] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:42.953 +02:00 [Information] Executed action "Services.APIService.ProductController.GetProductenPerWinkel (Services)" in 35.0805ms
+2019-04-10 09:25:42.955 +02:00 [Information] Request finished in 51.3004ms 200 application/json; charset=utf-8
+2019-04-10 09:25:54.431 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/winkel  
+2019-04-10 09:25:54.437 +02:00 [Information] Request finished in 5.3006ms 307 
+2019-04-10 09:25:54.458 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/winkel  
+2019-04-10 09:25:54.460 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:25:54.469 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:25:54.472 +02:00 [Information] Route matched with "{action = \"getWinkels\", controller = \"Winkel\"}". Executing action "Services.APIService.WinkelController.getWinkels (Services)"
+2019-04-10 09:25:54.476 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:25:54.478 +02:00 [Information] Executing action method "Services.APIService.WinkelController.getWinkels (Services)" - Validation state: Valid
+2019-04-10 09:25:54.485 +02:00 [Information] Executed action method "Services.APIService.WinkelController.getWinkels (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 0.0068ms.
+2019-04-10 09:25:54.490 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:25:54.493 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:25:54.498 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]"
+2019-04-10 09:25:54.503 +02:00 [Information] Executed action "Services.APIService.WinkelController.getWinkels (Services)" in 26.7904ms
+2019-04-10 09:25:54.505 +02:00 [Information] Request finished in 46.5432ms 200 application/json; charset=utf-8
+2019-04-10 09:26:23.178 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/sogyolunchapi/winkeluitzonderingenperbezorgdag application/json 70
+2019-04-10 09:26:23.186 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:26:23.198 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:26:23.205 +02:00 [Information] Request finished in 27.0127ms 307 
+2019-04-10 09:26:23.229 +02:00 [Information] Request starting HTTP/1.1 OPTIONS https://localhost:5001/sogyolunchapi/winkeluitzonderingenperbezorgdag  
+2019-04-10 09:26:23.235 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:26:23.238 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:26:23.243 +02:00 [Information] Request finished in 13.8517ms 204 
+2019-04-10 09:26:23.248 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/sogyolunchapi/winkeluitzonderingenperbezorgdag application/json 70
+2019-04-10 09:26:23.252 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:26:23.254 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:26:23.256 +02:00 [Information] Route matched with "{action = \"PostWinkelUitzondering\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)"
+2019-04-10 09:26:23.258 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:26:23.287 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)" with arguments (["SogyoLunchApp.WinkelUitzonderingenPerBezorgdag"]) - Validation state: Valid
+2019-04-10 09:26:23.290 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:26:23.357 +02:00 [Information] Executed DbCommand ("7"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [WinkelUitzonderingenPerBezorgdagen] ([Date], [BestelDeadline], [WinkelId])
+VALUES (@p0, @p1, @p2);"
+2019-04-10 09:26:23.366 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 77.0646ms.
+2019-04-10 09:26:23.372 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-04-10 09:26:23.373 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)" in 114.89ms
+2019-04-10 09:26:23.375 +02:00 [Information] Request finished in 127.0542ms 200 
+2019-04-10 09:26:54.330 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/winkel  
+2019-04-10 09:26:54.333 +02:00 [Information] Request finished in 2.7078ms 307 
+2019-04-10 09:26:54.653 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/winkel  
+2019-04-10 09:26:54.714 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:26:54.716 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:26:54.717 +02:00 [Information] Route matched with "{action = \"getWinkels\", controller = \"Winkel\"}". Executing action "Services.APIService.WinkelController.getWinkels (Services)"
+2019-04-10 09:26:54.719 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:26:54.722 +02:00 [Information] Executing action method "Services.APIService.WinkelController.getWinkels (Services)" - Validation state: Valid
+2019-04-10 09:26:54.724 +02:00 [Information] Executed action method "Services.APIService.WinkelController.getWinkels (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 0.0119ms.
+2019-04-10 09:26:54.726 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:26:54.729 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:26:54.736 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]"
+2019-04-10 09:26:54.741 +02:00 [Information] Executed action "Services.APIService.WinkelController.getWinkels (Services)" in 21.7792ms
+2019-04-10 09:26:54.745 +02:00 [Information] Request finished in 92.0405ms 200 application/json; charset=utf-8
+2019-04-10 09:27:06.946 +02:00 [Information] Request starting HTTP/1.1 POST http://localhost:5000/sogyolunchapi/winkeluitzonderingenperbezorgdag application/json 70
+2019-04-10 09:27:06.948 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:27:06.950 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:27:06.951 +02:00 [Information] Request finished in 5.5401ms 307 
+2019-04-10 09:27:06.954 +02:00 [Information] Connection id ""0HLLTGMDV8GVE"", Request id ""0HLLTGMDV8GVE:00000001"": the application completed without reading the entire request body.
+2019-04-10 09:27:06.966 +02:00 [Information] Request starting HTTP/1.1 OPTIONS https://localhost:5001/sogyolunchapi/winkeluitzonderingenperbezorgdag  
+2019-04-10 09:27:06.968 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:27:06.970 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:27:06.971 +02:00 [Information] Request finished in 5.6744ms 204 
+2019-04-10 09:27:06.977 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/sogyolunchapi/winkeluitzonderingenperbezorgdag application/json 70
+2019-04-10 09:27:06.982 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 09:27:06.984 +02:00 [Information] CORS policy execution successful.
+2019-04-10 09:27:06.985 +02:00 [Information] Route matched with "{action = \"PostWinkelUitzondering\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)"
+2019-04-10 09:27:06.990 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:27:06.992 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)" with arguments (["SogyoLunchApp.WinkelUitzonderingenPerBezorgdag"]) - Validation state: Valid
+2019-04-10 09:28:21.331 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:28:21.339 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/WinkelUitzonderingenPerBezorgdag application/json 
+2019-04-10 09:28:21.349 +02:00 [Information] Route matched with "{action = \"GetAlleWinkelUitzonderingenPerBezorgdag\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)"
+2019-04-10 09:28:21.352 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:28:21.354 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" - Validation state: Valid
+2019-04-10 09:28:21.360 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:28:21.367 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 10.8745ms.
+2019-04-10 09:28:21.369 +02:00 [Information] Executed DbCommand ("5"ms) [Parameters=["@p0='?' (DbType = DateTime2), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+INSERT INTO [WinkelUitzonderingenPerBezorgdagen] ([Date], [BestelDeadline], [WinkelId])
+VALUES (@p0, @p1, @p2);"
+2019-04-10 09:28:21.369 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[SogyoLunchApp.WinkelUitzonderingenPerBezorgdag, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:28:21.376 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 74381.7925ms.
+2019-04-10 09:28:21.379 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-04-10 09:28:21.381 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.PostWinkelUitzondering (Services)" in 74391.2389ms
+2019-04-10 09:28:21.387 +02:00 [Information] Request finished in 74410.1229ms 200 
+2019-04-10 09:28:21.448 +02:00 [Information] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Date], [x].[BestelDeadline], [x].[WinkelId], [x.Winkel].[WinkelId], [x.Winkel].[Winkellocatie], [x.Winkel].[Winkelnaam]
+FROM [WinkelUitzonderingenPerBezorgdagen] AS [x]
+LEFT JOIN [Winkels] AS [x.Winkel] ON [x].[WinkelId] = [x.Winkel].[WinkelId]"
+2019-04-10 09:28:21.463 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" in 110.7434ms
+2019-04-10 09:28:21.465 +02:00 [Information] Request finished in 125.9963ms 200 application/json; charset=utf-8
+2019-04-10 09:28:28.505 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/WinkelUitzonderingenPerBezorgdag application/json 
+2019-04-10 09:28:28.518 +02:00 [Information] Route matched with "{action = \"GetAlleWinkelUitzonderingenPerBezorgdag\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)"
+2019-04-10 09:28:28.521 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:28:28.524 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" - Validation state: Valid
+2019-04-10 09:28:28.530 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:28:28.536 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 6.7308ms.
+2019-04-10 09:28:28.539 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[SogyoLunchApp.WinkelUitzonderingenPerBezorgdag, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:28:28.557 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Date], [x].[BestelDeadline], [x].[WinkelId], [x.Winkel].[WinkelId], [x.Winkel].[Winkellocatie], [x.Winkel].[Winkelnaam]
+FROM [WinkelUitzonderingenPerBezorgdagen] AS [x]
+LEFT JOIN [Winkels] AS [x.Winkel] ON [x].[WinkelId] = [x.Winkel].[WinkelId]"
+2019-04-10 09:28:28.562 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" in 41.0327ms
+2019-04-10 09:28:28.566 +02:00 [Information] Request finished in 61.1778ms 200 application/json; charset=utf-8
+2019-04-10 09:29:00.487 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/WinkelUitzonderingenPerBezorgdag?datum=2019-03-05 application/json 
+2019-04-10 09:29:00.509 +02:00 [Information] Route matched with "{action = \"GetAlleWinkelUitzonderingenPerBezorgdag\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)"
+2019-04-10 09:29:00.512 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:29:00.514 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" - Validation state: Valid
+2019-04-10 09:29:00.520 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:29:00.524 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 5.2374ms.
+2019-04-10 09:29:00.529 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[SogyoLunchApp.WinkelUitzonderingenPerBezorgdag, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:29:00.537 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Date], [x].[BestelDeadline], [x].[WinkelId], [x.Winkel].[WinkelId], [x.Winkel].[Winkellocatie], [x.Winkel].[Winkelnaam]
+FROM [WinkelUitzonderingenPerBezorgdagen] AS [x]
+LEFT JOIN [Winkels] AS [x.Winkel] ON [x].[WinkelId] = [x.Winkel].[WinkelId]"
+2019-04-10 09:29:00.541 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" in 28.6421ms
+2019-04-10 09:29:00.546 +02:00 [Information] Request finished in 59.7022ms 200 application/json; charset=utf-8
+2019-04-10 09:29:08.386 +02:00 [Information] Request starting HTTP/1.1 DELETE https://localhost:5001/sogyolunchapi/WinkelUitzonderingenPerBezorgdag?datum=2019-03-05 application/json 0
+2019-04-10 09:29:08.390 +02:00 [Information] Route matched with "{action = \"DeleteWinkelUitzondering\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.DeleteWinkelUitzondering (Services)"
+2019-04-10 09:29:08.392 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:29:08.399 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.DeleteWinkelUitzondering (Services)" with arguments (["3/5/2019 12:00:00 AM"]) - Validation state: Valid
+2019-04-10 09:29:08.404 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:29:08.424 +02:00 [Information] Executed DbCommand ("8"ms) [Parameters=["@__datum_Date_0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(2) [x].[Date], [x].[BestelDeadline], [x].[WinkelId]
+FROM [WinkelUitzonderingenPerBezorgdagen] AS [x]
+WHERE CONVERT(date, [x].[Date]) = @__datum_Date_0"
+2019-04-10 09:29:08.457 +02:00 [Information] Executed DbCommand ("10"ms) [Parameters=["@p0='?' (DbType = DateTime2)"], CommandType='Text', CommandTimeout='30']"
+""SET NOCOUNT ON;
+DELETE FROM [WinkelUitzonderingenPerBezorgdagen]
+WHERE [Date] = @p0;
+SELECT @@ROWCOUNT;"
+2019-04-10 09:29:08.465 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.DeleteWinkelUitzondering (Services)", returned result "Microsoft.AspNetCore.Mvc.OkResult" in 63.0405ms.
+2019-04-10 09:29:08.469 +02:00 [Information] Executing HttpStatusCodeResult, setting HTTP status code 200
+2019-04-10 09:29:08.470 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.DeleteWinkelUitzondering (Services)" in 78.1974ms
+2019-04-10 09:29:08.472 +02:00 [Information] Request finished in 86.1041ms 200 
+2019-04-10 09:29:24.104 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/WinkelUitzonderingenPerBezorgdag application/json 
+2019-04-10 09:29:24.107 +02:00 [Information] Route matched with "{action = \"GetAlleWinkelUitzonderingenPerBezorgdag\", controller = \"WinkelUitzonderingenPerBezorgdag\"}". Executing action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)"
+2019-04-10 09:29:24.111 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 09:29:24.117 +02:00 [Information] Executing action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" - Validation state: Valid
+2019-04-10 09:29:24.120 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 09:29:24.123 +02:00 [Information] Executed action method "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 3.7734ms.
+2019-04-10 09:29:24.128 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions+IncludableQueryable`2[[SogyoLunchApp.WinkelUitzonderingenPerBezorgdag, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 09:29:24.133 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Date], [x].[BestelDeadline], [x].[WinkelId], [x.Winkel].[WinkelId], [x.Winkel].[Winkellocatie], [x.Winkel].[Winkelnaam]
+FROM [WinkelUitzonderingenPerBezorgdagen] AS [x]
+LEFT JOIN [Winkels] AS [x.Winkel] ON [x].[WinkelId] = [x.Winkel].[WinkelId]"
+2019-04-10 09:29:24.140 +02:00 [Information] Executed action "Services.APIService.WinkelUitzonderingenPerBezorgdagController.GetAlleWinkelUitzonderingenPerBezorgdag (Services)" in 29.2175ms
+2019-04-10 09:29:24.142 +02:00 [Information] Request finished in 38.0993ms 200 application/json; charset=utf-8
+2019-04-10 17:25:14.281 +02:00 [Information] User profile is available. Using '"C:\Users\rsmits\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-04-10 17:25:14.546 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 17:25:15.359 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 17:25:20.509 +02:00 [Information] Executed DbCommand ("18"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2019-04-10 17:25:20.516 +02:00 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2019-04-10 17:25:20.523 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2019-04-10 17:25:20.531 +02:00 [Information] No migrations were applied. The database is already up to date.
+2019-04-10 17:25:21.484 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/winkel  
+2019-04-10 17:25:21.530 +02:00 [Information] Request finished in 46.0241ms 307 
+2019-04-10 17:25:21.641 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/winkel  
+2019-04-10 17:25:21.644 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 17:25:21.646 +02:00 [Information] CORS policy execution successful.
+2019-04-10 17:25:21.876 +02:00 [Information] Route matched with "{action = \"getWinkels\", controller = \"Winkel\"}". Executing action "Services.APIService.WinkelController.getWinkels (Services)"
+2019-04-10 17:25:21.881 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 17:25:21.891 +02:00 [Information] Executing action method "Services.APIService.WinkelController.getWinkels (Services)" - Validation state: Valid
+2019-04-10 17:25:21.896 +02:00 [Information] Executed action method "Services.APIService.WinkelController.getWinkels (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 1.4255ms.
+2019-04-10 17:25:21.904 +02:00 [Information] Executing JsonResult, writing value of type '"Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1[[SogyoLunchApp.Winkel, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 17:25:22.067 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 17:25:22.193 +02:00 [Information] Executed DbCommand ("13"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]"
+2019-04-10 17:25:22.253 +02:00 [Information] Executed action "Services.APIService.WinkelController.getWinkels (Services)" in 367.5027ms
+2019-04-10 17:25:22.277 +02:00 [Information] Request finished in 636.1541ms 200 application/json; charset=utf-8
+2019-04-10 17:25:22.459 +02:00 [Information] Request starting HTTP/1.1 GET http://localhost:5000/sogyolunchapi/product/winkel/Albert Heijn Bezorgservice  
+2019-04-10 17:25:22.461 +02:00 [Information] Request finished in 2.4183ms 307 
+2019-04-10 17:25:22.723 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/sogyolunchapi/product/winkel/Albert Heijn Bezorgservice  
+2019-04-10 17:25:22.777 +02:00 [Warning] The CORS protocol does not allow specifying a wildcard (any) origin and credentials at the same time. Configure the policy by listing individual origins if credentials needs to be supported.
+2019-04-10 17:25:22.778 +02:00 [Information] CORS policy execution successful.
+2019-04-10 17:25:22.840 +02:00 [Information] Route matched with "{action = \"GetProductenPerWinkel\", controller = \"Product\"}". Executing action "Services.APIService.ProductController.GetProductenPerWinkel (Services)"
+2019-04-10 17:25:22.842 +02:00 [Warning] Missing required parameters "Username" and "Password" for connection string "LanthirDatabase"
+2019-04-10 17:25:22.976 +02:00 [Information] Executing action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)" with arguments (["Albert Heijn Bezorgservice"]) - Validation state: Valid
+2019-04-10 17:25:23.387 +02:00 [Information] Entity Framework Core "2.2.2-servicing-10034" initialized '"LunchAppContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None"
+2019-04-10 17:25:23.472 +02:00 [Information] Executed DbCommand ("26"ms) [Parameters=["@__name_0='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [w].[WinkelId], [w].[Winkellocatie], [w].[Winkelnaam]
+FROM [Winkels] AS [w]
+WHERE [w].[Winkelnaam] = @__name_0"
+2019-04-10 17:25:23.510 +02:00 [Information] Executed DbCommand ("11"ms) [Parameters=["@__winkel_0_WinkelId='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[ProductId], [x].[Naam], [x].[Prijs], [x].[WinkelId]
+FROM [Producten] AS [x]
+WHERE [x].[WinkelId] = @__winkel_0_WinkelId"
+2019-04-10 17:25:23.527 +02:00 [Information] Executed action method "Services.APIService.ProductController.GetProductenPerWinkel (Services)", returned result "Microsoft.AspNetCore.Mvc.JsonResult" in 145.9958ms.
+2019-04-10 17:25:23.529 +02:00 [Information] Executing JsonResult, writing value of type '"System.Collections.Generic.List`1[[Domain.Product, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2019-04-10 17:25:23.535 +02:00 [Information] Executed action "Services.APIService.ProductController.GetProductenPerWinkel (Services)" in 693.115ms
+2019-04-10 17:25:23.537 +02:00 [Information] Request finished in 813.6154ms 200 application/json; charset=utf-8
+2019-04-10 17:25:23.818 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/values  
+2019-04-10 17:25:23.869 +02:00 [Information] Sending file. Request path: '"/index.html"'. Physical path: '"C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Services\wwwroot\index.html"'
+2019-04-10 17:25:23.892 +02:00 [Information] Request finished in 73.0268ms 200 text/html
+2019-04-10 17:25:24.044 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/Sogyologo.jpg  
+2019-04-10 17:25:24.090 +02:00 [Information] Request finished in 46.2245ms 404 

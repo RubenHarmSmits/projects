@@ -1,0 +1,74 @@
+apiVersion: v1
+kind: Secret 
+metadata:
+  name: lanthir-mssql-db-credentials
+type: Opaque
+data:
+  MSSQL_USER: U0E=
+  MSSQL_PASSWORD: bnR5d0xxQXRiQ1NXWlJFbnRDSFYyTGFXenlTU0M5VmRYanRFRDJZVzlDdEJkNnhZbURldXlqMnJoRENabzhpaA==
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: lanthir-mssql-db-svc
+  labels:
+    app: lanthir-mssql-db
+spec:
+  type: ClusterIP
+  clusterIP: None
+  ports:
+    - port: 1433
+      name: transport
+  selector:
+    app: lanthir-mssql-db
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: lanthir-mssql-db-sts
+  labels:
+    app: lanthir-mssql-db
+spec:
+  selector:
+    matchLabels:
+      app: lanthir-mssql-db
+  serviceName: lanthir-mssql-db-svc
+  template:
+    metadata:
+      labels:
+        app: lanthir-mssql-db
+    spec:
+      containers:
+        - name: mssql-db
+          image: mcr.microsoft.com/mssql/server:2017-latest
+          livenessProbe:
+            tcpSocket:
+              port: transport
+            initialDelaySeconds: 30
+            periodSeconds: 60
+          ports:
+            - containerPort: 1433
+              name: transport
+          volumeMounts:
+            - name: lanthir-mssql-db-pvc
+              mountPath: /var/opt/mssql
+          env:
+            - name: MSSQL_PID
+              value: 'Developer'
+            - name: ACCEPT_EULA
+              value: 'Y'
+            - name: MSSQL_SA_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: lanthir-mssql-db-credentials
+                  key: MSSQL_PASSWORD
+    
+  volumeClaimTemplates:
+    - metadata:
+        name: lanthir-mssql-db-pvc
+      spec:
+        accessModes: [ "ReadWriteOnce" ]
+        storageClassName: local-path
+        resources:
+          requests:
+            storage: 16Gi

@@ -1,0 +1,9 @@
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\bin\Debug\netcoreapp2.2\Domain.deps.json
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\obj\Debug\netcoreapp2.2\Domain.dll
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\obj\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\rsmits\Documents\lanthir-lunch\SogyoLunchApp\Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
